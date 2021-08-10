@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { filter } from 'minimatch';
+import { Platform } from '@ionic/angular';
 
 declare let cordova: any;
 
@@ -9,17 +10,62 @@ declare let cordova: any;
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  private ymChat;
-  private botId: String;
+  private isPlatformReady: Boolean = false;
 
-  constructor() {
-    this.ymChat = cordova.plugins.ymchat;
-    this.botId = "x1608615889375";
-    cordova.plugins.ymchat.setBotId(this.botId);
+  constructor(public platform: Platform) {
+    platform.ready().then(
+      () => {
+        this.isPlatformReady = true;
+
+        // setBotId
+        /*
+        cordova.plugins.ymchat.setBotId(botId: String");
+        */
+        cordova.plugins.ymchat.setBotId("x1597301712805");
+
+        // setPayload
+        /*
+        cordova.plugins.ymchat.setPayload(payload: Object);
+        */
+        cordova.plugins.ymchat.setPayload({ "name": "Kartos", "designation": "God of war" })
+
+        // onEventFromBot
+        /*
+        cordova.plugins.ymchat.onEventFromBot(eventCallback: (event: Object)=> void);
+        */
+        cordova.plugins.ymchat.onEventFromBot(
+          (event) => {
+            console.log(JSON.stringify(event));
+          }
+        );
+
+        // onBotClose
+        /*
+        cordova.plugins.ymchat.onBotClose(botCloseEvent: ()=> void);
+        */
+        cordova.plugins.ymchat.onBotClose(
+          () => {
+            console.log("Bot closed")
+          }
+        )
+      }
+    )
   }
 
   startYmChatBot() {
-    cordova.plugins.ymchat.startBot(success, failure);
+    cordova.plugins.ymchat.setEnableSpeech(true);
+
+    if (this.isPlatformReady) {
+
+      // startBot
+      /*
+      cordova.plugins.ymchat.startBot(successCallback: ()=> void, failureCallback:(failureJSON: Object) => void);
+      */
+      cordova.plugins.ymchat.startChatbot(success, failure);
+    }
+    else {
+      failure(`isPlatform ready : ${this.isPlatformReady}`);
+    }
   }
 }
 const success = (result) => {

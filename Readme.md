@@ -1,34 +1,22 @@
-# ymchat
+# YmChatIonicDemo
 
-This demo app demonstrates how `ymchat` can be integrated in a ionic app
+This demo app demonstrates how `cordova-plugin-ymchat` can be integrated in a ionic app
 
-`ymchat` can be found at [https://github.com/PurushYM/YMChatIonic](https://github.com/PurushYM/YMChatIonic)
+`cordova-plugin-ymchat` can be found at [https://github.com/yellowmessenger/cordova-plugin-ymchat](https://github.com/yellowmessenger/cordova-plugin-ymchat)
 
 ## Steps to run
 
-1. Clone this `YMChatIonicDemo` app
-2. clone the `YMChatIonic` from [https://github.com/PurushYM/YMChatIonic](https://github.com/PurushYM/YMAgentSdk)
-3. keep both projects at same folder level
+1. Clone this `YmChatIonicDemo` app
 
+2. Run following command to install the dependencies for the project
    ```
-   exampleFolder
-   |
-   |- YMChatIonic
-   |- YMChatIonicDemo
+   ionic cordova prepare
+   ```
+3. Run following command to run application on android
+   ```
+    ionic cordova run android
+   ```
 
-   ```
+## Links
 
-4. Open terminal and navigate to `YMChatIonicDemo` folder
-5. Run the following command to activate android platform
-   ```
-   $ ionic cordova platform add android
-   $ ionic cordova platform add ios
-   ```
-6. Run following command to install YMAgentSdk to demo project
-   ```
-   $ ionic cordova add ../YMChatIonic
-   ```
-7. Run following command to run application on android
-   ```
-    $ ionic cordova run android
-   ```
+Documentation on YMChat - [https://docs.yellow.ai/docs/platform_concepts/channelConfiguration/cordova](https://docs.yellow.ai/docs/platform_concepts/channelConfiguration/cordova)
