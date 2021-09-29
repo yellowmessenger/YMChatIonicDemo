@@ -67,6 +67,15 @@ export class HomePage {
       failure(`isPlatform ready : ${this.isPlatformReady}`);
     }
   }
+
+  logout() {
+    cordova.plugins.ymchat.unlinkDeviceToken("x1597301712805", "apiKey", "deviceToken", () => {
+      alert("Removed device token successfully");
+    }, (error) => {
+      alert(`error ${error.message}`)
+    })
+  }
+
 }
 const success = (result) => {
   alert(result);
