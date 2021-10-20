@@ -23,6 +23,12 @@ export class HomePage {
         */
         cordova.plugins.ymchat.setBotId("x1597301712805");
 
+        // setBotId
+        /*
+        cordova.plugins.ymchat.setVersion(version: int");
+        */
+        cordova.plugins.ymchat.setVersion(2);
+
         // setPayload
         /*
         cordova.plugins.ymchat.setPayload(payload: Object);
