@@ -64,6 +64,8 @@ export class HomePage {
   }
 
   startYmChatBot() {
+    cordova.plugins.ymchat.setEnableSpeech(true);
+    
     if (this.isPlatformReady) {
 
       // startBot
