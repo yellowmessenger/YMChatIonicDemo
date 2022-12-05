@@ -21,13 +21,13 @@ export class HomePage {
         /*
         cordova.plugins.ymchat.setBotId(botId: String");
         */
-        cordova.plugins.ymchat.setBotId("x1645602443989");
+        cordova.plugins.ymchat.setBotId("x1597301712805");
 
         // setBotId
         /*
         cordova.plugins.ymchat.setVersion(version: int");
         */
-        cordova.plugins.ymchat.useLiteVersion(true);
+        cordova.plugins.ymchat.setVersion(2);
 
         // setPayload
         /*
@@ -59,6 +59,8 @@ export class HomePage {
   }
 
   startYmChatBot() {
+    cordova.plugins.ymchat.setEnableSpeech(true);
+
     if (this.isPlatformReady) {
 
       // startBot
