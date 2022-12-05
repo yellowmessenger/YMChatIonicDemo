@@ -21,19 +21,24 @@ export class HomePage {
         /*
         cordova.plugins.ymchat.setBotId(botId: String");
         */
-        cordova.plugins.ymchat.setBotId("x1645602443989");
+        cordova.plugins.ymchat.setBotId("x1597301712805");
 
         // setBotId
         /*
         cordova.plugins.ymchat.setVersion(version: int");
         */
-        cordova.plugins.ymchat.useLiteVersion(true);
+        cordova.plugins.ymchat.setVersion(2);
 
         // setPayload
         /*
         cordova.plugins.ymchat.setPayload(payload: Object);
         */
         cordova.plugins.ymchat.setPayload({ "name": "Kartos", "designation": "God of war" })
+
+        /*
+        cordova.plugins.ymchat.useLiteVersion(shouldUseLiteVersion: Boolean");
+        */
+        cordova.plugins.ymchat.useLiteVersion(true);
 
         // onEventFromBot
         /*
