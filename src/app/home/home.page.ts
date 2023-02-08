@@ -35,6 +35,11 @@ export class HomePage {
         */
         cordova.plugins.ymchat.setPayload({ "name": "Kartos", "designation": "God of war" })
 
+        /*
+        cordova.plugins.ymchat.useLiteVersion(shouldUseLiteVersion: Boolean");
+        */
+        cordova.plugins.ymchat.useLiteVersion(true);
+
         // onEventFromBot
         /*
         cordova.plugins.ymchat.onEventFromBot(eventCallback: (event: Object)=> void);
