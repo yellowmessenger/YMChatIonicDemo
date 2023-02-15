@@ -95,7 +95,7 @@ export class HomePage {
     cordova.plugins.ymchat.unlinkDeviceToken("Rs3tSLQF9tWS9lvZFOUyjPBwoiu4naOb7mueI44d", () => {
       alert("Removed device token successfully");
     }, (error) => {
-      alert("ERROR");
+      alert(`ERROR: ${error.message}`);
     })
   }
 
@@ -103,7 +103,7 @@ export class HomePage {
     cordova.plugins.ymchat.registerDevice("Rs3tSLQF9tWS9lvZFOUyjPBwoiu4naOb7mueI44d", () => {
       alert("Registered Device successfully");
     }, (error) => {
-      alert("ERROR");
+      alert(`ERROR: ${error.message}`);
     })
   }
 
@@ -111,7 +111,7 @@ export class HomePage {
     cordova.plugins.ymchat.getUnreadMessagesCount((count) => {
       alert(`Unread Message Count: ${count}`);
     }, (error) => {
-      alert("ERROR");
+      alert(`ERROR: ${error.message}`);
     })
   }
 
