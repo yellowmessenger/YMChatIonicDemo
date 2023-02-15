@@ -21,7 +21,7 @@ export class HomePage {
         /*
         cordova.plugins.ymchat.setBotId(botId: String");
         */
-        cordova.plugins.ymchat.setBotId("x1645602443989");
+        cordova.plugins.ymchat.setBotId("botId");
 
         // setBotId
         /*
@@ -39,7 +39,7 @@ export class HomePage {
         /*
         cordova.plugins.ymchat.setAuthenticationToken(token: String");
         */
-        cordova.plugins.ymchat.setAuthenticationToken("test345");
+        cordova.plugins.ymchat.setAuthenticationToken("authenticationToken");
 
         // setPayload
         /*
@@ -92,7 +92,7 @@ export class HomePage {
   }
 
   unlinkDeviceToken() {
-    cordova.plugins.ymchat.unlinkDeviceToken("Rs3tSLQF9tWS9lvZFOUyjPBwoiu4naOb7mueI44d", () => {
+    cordova.plugins.ymchat.unlinkDeviceToken("apiKey", () => {
       alert("Removed device token successfully");
     }, (error) => {
       alert(`ERROR: ${error.message}`);
@@ -100,7 +100,7 @@ export class HomePage {
   }
 
   registerDevice() {
-    cordova.plugins.ymchat.registerDevice("Rs3tSLQF9tWS9lvZFOUyjPBwoiu4naOb7mueI44d", () => {
+    cordova.plugins.ymchat.registerDevice("apiKey", () => {
       alert("Registered Device successfully");
     }, (error) => {
       alert(`ERROR: ${error.message}`);
