@@ -21,13 +21,25 @@ export class HomePage {
         /*
         cordova.plugins.ymchat.setBotId(botId: String");
         */
-        cordova.plugins.ymchat.setBotId("x1597301712805");
+        cordova.plugins.ymchat.setBotId("x1645602443989");
 
         // setBotId
         /*
         cordova.plugins.ymchat.setVersion(version: int");
         */
         cordova.plugins.ymchat.setVersion(2);
+
+        // setDeviceToken
+        /*
+        cordova.plugins.ymchat.setDeviceToken(token: String");
+        */
+        cordova.plugins.ymchat.setDeviceToken("deviceToken");
+
+       // setAuthenticationToken
+        /*
+        cordova.plugins.ymchat.setAuthenticationToken(token: String");
+        */
+        cordova.plugins.ymchat.setAuthenticationToken("test345");
 
         // setPayload
         /*
@@ -79,11 +91,27 @@ export class HomePage {
     }
   }
 
-  logout() {
-    cordova.plugins.ymchat.unlinkDeviceToken("x1597301712805", "apiKey", "deviceToken", () => {
+  unlinkDeviceToken() {
+    cordova.plugins.ymchat.unlinkDeviceToken("Rs3tSLQF9tWS9lvZFOUyjPBwoiu4naOb7mueI44d", () => {
       alert("Removed device token successfully");
     }, (error) => {
-      alert(`error ${error.message}`)
+      alert("ERROR");
+    })
+  }
+
+  registerDevice() {
+    cordova.plugins.ymchat.registerDevice("Rs3tSLQF9tWS9lvZFOUyjPBwoiu4naOb7mueI44d", () => {
+      alert("Registered Device successfully");
+    }, (error) => {
+      alert("ERROR");
+    })
+  }
+
+  getUnreadMessagesCount() {
+    cordova.plugins.ymchat.getUnreadMessagesCount((count) => {
+      alert(`Unread Message Count: ${count}`);
+    }, (error) => {
+      alert("ERROR");
     })
   }
 
