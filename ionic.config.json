@@ -1,7 +1,7 @@
 {
-  "name": "ionicYmChatDemo",
+  "name": "YMChatIonicDemo",
   "integrations": {
-    "cordova": {}
+    "capacitor": {}
   },
   "type": "angular"
 }

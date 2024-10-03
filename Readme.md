@@ -10,11 +10,11 @@ This demo app demonstrates how `cordova-plugin-ymchat` can be integrated in a io
 
 2. Run following command to install the dependencies for the project
    ```
-   ionic cordova prepare
+   npm install
    ```
-3. Run following command to run application on android
+3. Run following command to run the application
    ```
-    ionic cordova run android
+    ionic capacitor run
    ```
 
 ## Links
