@@ -1,7 +1,0 @@
-{
-  "name": "ionicYmChatDemo",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
-}
