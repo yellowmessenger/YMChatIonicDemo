@@ -25,10 +25,10 @@ export class HomePage {
       // cordova.plugins.ymchat.useLiteVersion(true);
 
       /* setAuthenticationToken */
-      // cordova.plugins.ymchat.setAuthenticationToken('authToken');
+      cordova.plugins.ymchat.setAuthenticationToken('authToken');
 
       /* setDeviceToken for Push Notifications */
-      // cordova.plugins.ymchat.setDeviceToken('deviceToken');
+      cordova.plugins.ymchat.setDeviceToken('deviceToken');
 
       /* Use Secure YM Auth */
       // cordova.plugins.ymchat.useSecureYmAuth(true);
