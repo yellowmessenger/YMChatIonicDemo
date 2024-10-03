@@ -1,0 +1,7 @@
+{
+  "name": "YMChatIonicDemo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
